@@ -216,7 +216,7 @@ public class SDJWTVCVerifier: SdJwtVcVerifierType {
           return nil
         }
         guard let expectedNonce = expectedNonce else {
-          throw SDJWTVerifierError.keyBindingFailed(description: "Expected nonce is required when key binding verification is performed (RFC 9901 Section 7.3)")
+          throw SDJWTVerifierError.keyBindingFailed(description: "Expected nonce is required when key binding verification is performed")
         }
         try keyBindingVerifier.verify(
           expectedNonce: expectedNonce,
@@ -264,7 +264,7 @@ public class SDJWTVCVerifier: SdJwtVcVerifierType {
           return nil
         }
         guard let expectedNonce = expectedNonce else {
-          throw SDJWTVerifierError.keyBindingFailed(description: "Expected nonce is required when key binding verification is performed (RFC 9901 Section 7.3)")
+          throw SDJWTVerifierError.keyBindingFailed(description: "Expected nonce is required when key binding verification is performed.")
         }
         try keyBindingVerifier.verify(
           expectedNonce: expectedNonce,
